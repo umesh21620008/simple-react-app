@@ -1,5 +1,6 @@
 pipeline {
     agent {
+        sh 'usermod -a -G docker jenkins'
         docker {
             image 'node:6-alpine'
             args '-p 3000:3000'
